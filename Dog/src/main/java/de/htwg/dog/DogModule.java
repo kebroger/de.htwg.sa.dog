@@ -23,5 +23,7 @@ public class DogModule extends AbstractModule {
             bind(IModelFactory.class).to(de.htwg.dog.model.impl.ModelFactory.class);
             bind(IController.class).to(de.htwg.dog.controller.impl.Controller.class);
             bind(IGameDAO.class).to(de.htwg.dog.persistence.hibernate.GameHibernateDAO.class);
+            //bind(IGameDAO.class).to(de.htwg.dog.persistence.db4o.GameDb4oDAO.class);
+            //bind(IGameDAO.class).to(de.htwg.dog.persistence.couchdb.GameCouchdbDAO.class);
     }
 }

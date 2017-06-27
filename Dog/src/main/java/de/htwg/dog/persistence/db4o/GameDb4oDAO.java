@@ -13,7 +13,8 @@ public class GameDb4oDAO implements IGameDAO {
     private ObjectContainer db;
 
     public GameDb4oDAO() {
-        db = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"game.data");
+        db = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),
+                "game.data");
     }
 
     @Override

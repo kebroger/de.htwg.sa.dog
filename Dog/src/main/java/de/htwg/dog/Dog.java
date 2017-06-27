@@ -43,6 +43,8 @@ public final class Dog {
         this.tui = injector.getInstance(Tui.class);
 
         this.controller.startGame();
+
+        this.getController().gameToJson();
     }
 
     public static Dog getInstance() {
