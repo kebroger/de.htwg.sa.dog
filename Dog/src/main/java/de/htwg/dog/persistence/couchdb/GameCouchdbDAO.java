@@ -37,6 +37,8 @@ public class GameCouchdbDAO implements IGameDAO {
 		db = dbInstance.createConnector("dog_db", true);
 	}
 
+	public void closeDb(){}
+
 	private IModel copyGame(PersistentGame pgame) {
 		if(pgame == null) {
 			return null;

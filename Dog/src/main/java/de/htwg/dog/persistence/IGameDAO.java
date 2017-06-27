@@ -6,13 +6,15 @@ import java.util.List;
 
 public interface IGameDAO {
 
-    public void saveGame(IModel id);
+    void saveGame(IModel id);
 
-    public IModel getGame(String id);
+    IModel getGame(String id);
 
-    public void deleteGame(String id);
+    void deleteGame(String id);
 
-    public List<IModel> getAllGames();
+    List<IModel> getAllGames();
 
-    public boolean containsGame(String id);
+    boolean containsGame(String id);
+
+    void closeDb();
 }

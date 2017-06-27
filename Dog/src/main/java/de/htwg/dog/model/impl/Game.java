@@ -89,6 +89,10 @@ public final class Game implements IModel {
 
     private void start() {
 
+        this.id = UUID.randomUUID().toString();
+
+        resetSelectedSquares();
+
         board = new Board(squareCnt);
         Draw.squareCnt = squareCnt;
 
@@ -452,10 +456,5 @@ public final class Game implements IModel {
             selectedCard = null;
             resetSelectedSquares();
         }
-    }
-
-    public Game()
-    {
-        this.id = UUID.randomUUID().toString();
     }
 }

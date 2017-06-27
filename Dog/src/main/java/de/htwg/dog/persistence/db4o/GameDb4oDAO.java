@@ -13,9 +13,7 @@ public class GameDb4oDAO implements IGameDAO {
     private ObjectContainer db;
 
     public GameDb4oDAO() {
-        String executionPath = System.getProperty("user.dir");
-        db = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),
-                "game.data");
+        db = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"game.data");
     }
 
     @Override
@@ -38,13 +36,13 @@ public class GameDb4oDAO implements IGameDAO {
     }
 
     @Override
-    public boolean containsGame(final String name) {
+    public boolean containsGame(final String id) {
         List<IModel> games = db.query(new Predicate<IModel>() {
 
             private static final long serialVersionUID = 1L;
 
             public boolean match(IModel game) {
-                return (game.getName().equals(name));
+                return (game.getId().equals(id));
             }
         });
 
@@ -55,19 +53,18 @@ public class GameDb4oDAO implements IGameDAO {
     }
 
     @Override
-    public IModel getGame(final String name) {
+    public IModel getGame(final String id) {
         List<IModel> games = db.query(new Predicate<IModel>() {
 
-            private static final long serialVersionUID = 1L;
-
             public boolean match(IModel game) {
-                return (game.getName().equals(name));
+                return (game.getId().equals(id));
             }
         });
 
         if (games.size() > 0) {
             return games.get(0);
         }
+
         return null;
     }
 }

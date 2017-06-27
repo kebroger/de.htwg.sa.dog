@@ -1,9 +1,7 @@
 package de.htwg.dog;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import de.htwg.dog.model.ICard;
-import de.htwg.dog.model.IModel;
 import de.htwg.dog.model.IPlayer;
 import de.htwg.dog.model.ISquare;
 import de.htwg.dog.model.impl.Draw;

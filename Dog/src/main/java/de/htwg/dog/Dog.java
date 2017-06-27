@@ -14,15 +14,7 @@ import de.htwg.dog.view.gui.Gui;
 import de.htwg.dog.view.tui.Tui;
 import org.apache.log4j.PropertyConfigurator;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.List;
 
 /**
  *

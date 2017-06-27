@@ -22,10 +22,11 @@ public class GameHibernateDAO implements IGameDAO {
             return null;
         }
         IModel game = new Game();
-        game.setId(pgame.id);
+
         game.setName(pgame.name);
         game.configureGame(pgame.playerCnt, pgame.squareCnt, pgame.tokenCnt);
         game.startGame();
+        game.setId(pgame.id);
 
         game.setCardsPerHand(pgame.cardsPerHand);
         game.setInfo(pgame.info);
@@ -52,6 +53,8 @@ public class GameHibernateDAO implements IGameDAO {
 
         return game;
 	}
+
+    public void closeDb(){}
 
 	private PersistentGame copyGame(IModel game) {
 		if(game == null) {

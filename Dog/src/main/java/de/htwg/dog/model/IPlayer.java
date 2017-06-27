@@ -7,7 +7,6 @@
 package de.htwg.dog.model;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import de.htwg.dog.model.impl.Player;
 
@@ -21,15 +20,15 @@ import java.util.List;
 @JsonDeserialize(as=Player.class)
 public interface IPlayer {
 
-    public List<ICard> getCards();
+    List<ICard> getCards();
 
-    public List<ISquare> getFinishSquares();
+    List<ISquare> getFinishSquares();
 
-    public List<ISquare> getHomeSquares();
+    List<ISquare> getHomeSquares();
 
-    public int getPlayerNumber();
+    int getPlayerNumber();
 
-    public ISquare getStartSquare();
+    ISquare getStartSquare();
 
-    public ICard getCardByName(String name);
+    ICard getCardByName(String name);
 }

@@ -32,9 +32,13 @@ dependencies {
 	testCompile 'junit:junit:4.10'
 	compile group: 'org.ektorp', name: 'org.ektorp', version: '1.4.4'
 	compile group: 'com.google.inject', name: 'guice', version: '4.1.0'
-	compile group: 'javax.persistence', name: 'persistence-api', version: '1.0.2'
-	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.10.Final'
-	compile name: 'db4o-8.0.249.16098-all-java5'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.10.Final'
+    compile group: 'org.hibernate', name: 'hibernate-annotations', version: '3.5.6-Final'
+    compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: '1.0.0.Final'
+    compile name: 'db4o-8.0.249.16098-all-java5'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.26'
+	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+	compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
 }
 
 if (!hasProperty('mainClass')) {

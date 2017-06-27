@@ -38,8 +38,8 @@ public class Controller implements IController {
     }
 
     @Override
-    public void loadFromDB(String name){
-        this.model = gameDAO.getGame(name);
+    public void loadFromDB(String id){
+        this.model = gameDAO.getGame(id);
         update();
     }
 
@@ -209,6 +209,4 @@ public class Controller implements IController {
         catch(Exception e){ System.out.println(e.getMessage());};
         update();
     }
-
-
 }
